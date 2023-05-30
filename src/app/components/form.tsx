@@ -104,7 +104,7 @@ export default function Form() {
             </h2>
 
             <div className="flex flex-col md:flex-row items-center gap-5 md:gap-44">
-                <div className="w-96">
+                <div className="w-80 sm:w-96">
                     <h3 className="text-md text-justify md:text-5xl font-mono font-bold text-solidheadinglight dark:text-solidheadingdark mt-3">
                         Drop me a line. I would like to hear from you.
                     </h3>

@@ -99,7 +99,7 @@ export default function Form() {
   </div>
 </div>
       )}
-            <h2 className="font-mono font-extrabold text-3xl text-solidheadinglight dark:text-solidheadingdark text-center">
+            <h2 className="font-mono font-extrabold text-3xl mx-4 text-solidheadinglight dark:text-solidheadingdark text-center">
                 Contact Me
             </h2>
 

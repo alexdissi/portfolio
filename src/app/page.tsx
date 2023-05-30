@@ -8,6 +8,7 @@ import AboutMe from "./components/aboutme";
 import Stack from './components/stack';
 import Form from './components/form';
 import Experience from './components/experience';
+import { Analytics } from '@vercel/analytics/react';
 import Project from './components/project';
 import Footer from './components/footer';
 

@@ -24,7 +24,7 @@ export default function Project() {
     ];
 
     return (
-        <div className="flex flex-col flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row gap-10 justify-center mx-auto" data-aos="flip-right" id="project">
+        <div className="flex flex-col flex-wrap md:flex-wrap lg:flex-wrap xl:flex-nowrap lg:flex-row gap-10 justify-center mx-auto" data-aos="flip-right" id="project">
             {elExperience.map((experience) => (
                 <article
                     key={experience.id}

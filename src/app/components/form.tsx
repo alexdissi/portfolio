@@ -17,7 +17,7 @@ export default function Form() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
-    const [isAlertVisible, setIsAlertVisible] = useState(false);
+    const [isAlertVisible, setIsAlertVisible] = useState(true);
   
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
@@ -50,7 +50,7 @@ export default function Form() {
              {isAlertVisible && (
                 <div
   role="alert"
-  className="rounded-xl border fixed top-0 right-0 mr-4 mt-16 border-gray-100 bg-white p-4 shadow-xl"
+  className="rounded-xl border fixed top-0 right-0 ml-4 mr-4 mt-10 md:mt-16 border-gray-100 bg-white p-4 shadow-xl"
 >
   <div className="flex items-start gap-4">
     <span className="text-green-600">

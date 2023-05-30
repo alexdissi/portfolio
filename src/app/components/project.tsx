@@ -28,7 +28,7 @@ export default function Project() {
             {elExperience.map((experience) => (
                 <article
                     key={experience.id}
-                    className="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-xl w-96"
+                    className="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-xl w-80 md:w-96"
                 >
                     <img
                         alt="Office"

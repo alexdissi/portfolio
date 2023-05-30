@@ -2,7 +2,7 @@ import { FaGithub, FaTwitter, FaLinkedin, FaArrowUp } from 'react-icons/fa';
 export default function Footer() {
     return (
         <footer data-aos="zoom-in">
-            <div className='flex flex-row justify-between items-center'>
+            <div className='flex flex-col gap-3 md:flex-row justify-between items-center'>
                 <div>
                     <a href="mailto:alexandredissi@icloud.com,">alexandredissi@icloud.com</a>
                 </div>

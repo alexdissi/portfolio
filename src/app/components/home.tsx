@@ -3,7 +3,7 @@ import Typewriter from 'typewriter-effect';
 
 export default function HomePresentation() {
     return (
-        <div className="flex flex-col-reverse gap-0 md:flex-row text-center md:text-left md:justify-between items-center" id='home'>
+        <div className="flex flex-col-reverse gap-0 md:flex-col-reverse lg:flex-row text-center md:text-left md:justify-between items-center" id='home'>
             <div data-aos="fade-right">
                 <div className="text-4xl md:text-6xl font-mono font-extrabold mt-4 leading-snug text-solidheadinglight dark:text-solidheadingdark">
 
@@ -36,7 +36,7 @@ export default function HomePresentation() {
             </div>
             <div data-aos="fade-left">
                 <div className="p-2 bg-gradient-to-l from-rose-400 via-fuchsia-500 to-indigo-500 rounded-full">
-                    <img src="/photoprofil.png" alt="Photo de profil de Alexandre Dissi" className="rounded-full w-52 h-52 md:w-80 md:h-80" />
+                    <img src="/photoprofil.png" alt="Photo de profil de Alexandre Dissi" className="rounded-full w-52 h-52 md:w-72 md:h-72" />
                 </div>
             </div>
         </div>

@@ -17,7 +17,7 @@ export default function Form() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
-    const [isAlertVisible, setIsAlertVisible] = useState(true);
+    const [isAlertVisible, setIsAlertVisible] = useState(false);
   
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();

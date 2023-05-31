@@ -2,23 +2,23 @@ export default function Project() {
     const elExperience = [
         {
             id: 1,
-            titre: 'Projet 1',
-            Description: 'fgnjdfngjfdngjdfngkfdgnfdkgnfdkgnfdkgjndfjgndfgjdfngjdfg fjdg dfjg dfjg fdgkfd gkfd gkfdg',
-            techno: ["php", "Javasript"],
+            titre: 'Stages CFP',
+            Description: 'This is a site where university professors post internship applications to which students can respond. I took part in the whole project',
+            techno: ["Symfony", "MySQL" , "Foundation UI"],
             link: "www.github.fr"
         },
         {
             id: 2,
-            titre: 'Projet 2',
-            Description: 'fgnjdfngjfdngjdfngkfdgnfdkgnfdkgnfdkgjndfjgndfgjdfngjdfg fjdg dfjg dfjg fdgkfd gkfd gkfdg',
-            techno: ["React", "SQL"],
+            titre: 'Netflix Clone',
+            Description: ' I reproduced Netflix ( except video hosting ) using themoviedb Rest API to learn React  ',
+            techno: ["React", "API" , "TailWInd"],
             link: "www.github.fr"
         },
         {
             id: 3,
-            titre: 'Projet 3',
-            Description: 'fgnjdfngjfdngjdfngkfdgnfdkgnfdkgnfdkgjndfjgndfgjdfngjdfg fjdg dfjg dfjg fdgkfd gkfd gkfdg',
-            techno: ["php", "Javasript"],
+            titre: 'Portfolio',
+            Description: 'I realized the portfolio on which you are thanks to the numerous competences acquired these last months on the framework NextJs which I like very much. Always accompanied by tailwind that I use for all my projects and supabase for a small database to host the form.',
+            techno: ["Next JS", "TailWind" , "Supabase"],
             link: "www.github.fr"
         },
     ];

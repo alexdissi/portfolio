@@ -10,14 +10,14 @@ export default function Project() {
         {
             id: 2,
             titre: 'Netflix Clone',
-            Description: ' I reproduced Netflix ( except video hosting ) using themoviedb Rest API to learn React  ',
+            Description: ' I reproduced Netflix ( except video hosting ) using themoviedb Rest API to learn React and TailWind and reproduce the best UI .... Netflix  ',
             techno: ["React", "API" , "TailWInd"],
             link: "www.github.fr"
         },
         {
             id: 3,
             titre: 'Portfolio',
-            Description: 'I realized the portfolio on which you are thanks to the numerous competences acquired these last months on the framework NextJs which I like very much. Always accompanied by tailwind that I use for all my projects and supabase for a small database to host the form.',
+            Description: 'I realized the portfolio on which you are thanks to the numerous competences acquired these last months on the framework NextJs which I like very much.',
             techno: ["Next JS", "TailWind" , "Supabase"],
             link: "www.github.fr"
         },

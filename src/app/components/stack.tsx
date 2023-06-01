@@ -25,8 +25,8 @@ export default function Stack() {
                 <SiNextdotjs />
                 <SiSymfony />
                 <SiMysql className="hover:text-mysqlcolor duration-300" />
-                <SiPrisma className="hover:text-prismacolor duration-300" />
                 <SiMongodb className="hover:text-mongodbcolor duration-300" />
+                <SiPrisma className="hover:text-prismacolor duration-300" />
             </div>
         </div>
 

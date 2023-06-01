@@ -12,7 +12,7 @@ export default function Stack() {
                     Technologies I&apos;ve been working with recently
                 </h3>
             </div>
-            <div className="flex flex-row justify-center items-center text-5xl gap-6  md:text-[100px] md:gap-20 mt-10 cursor-pointer">
+            <div className="flex flex-row justify-center items-center text-4xl gap-6  md:text-[100px] md:gap-20 mt-10 cursor-pointer">
                 <SiJavascript className="hover:text-jscolor duration-300" />
                 <SiTypescript className="hover:text-tscolor duration-300" />
                 <SiReact className="hover:text-reactcolor duration-300" />
@@ -20,7 +20,7 @@ export default function Stack() {
                 <SiGit className="hover:text-gitcolor duration-300" />
                 <SiFigma />
             </div>
-            <div className="flex flex-row justify-center items-center text-5xl gap-6 md:text-[100px] md:gap-20 mt-10 cursor-pointer">
+            <div className="flex flex-row justify-center items-center text-4xl gap-6 md:text-[100px] md:gap-20 mt-10 cursor-pointer">
                 <SiPhp className="hover:text-phpcolor duration-300" />
                 <SiNextdotjs />
                 <SiSymfony />

@@ -1,4 +1,4 @@
-import { SiReact, SiJavascript, SiNextdotjs, SiTailwindcss, SiTypescript, SiPhp, SiSymfony, SiMysql, SiPrisma, SiGit } from "react-icons/si";
+import { SiReact, SiJavascript, SiNextdotjs, SiTailwindcss, SiTypescript, SiPhp, SiSymfony, SiMysql, SiPrisma, SiGit, SiFigma,SiMongodb } from "react-icons/si";
 export default function Stack() {
     return (
         <div className="flex flex-col justify-center items-center" data-aos="fade-up" id="stack">
@@ -18,6 +18,7 @@ export default function Stack() {
                 <SiReact className="hover:text-reactcolor duration-300" />
                 <SiTailwindcss className="hover:text-tailwindcolor duration-300" />
                 <SiGit className="hover:text-gitcolor duration-300" />
+                <SiFigma />
             </div>
             <div className="flex flex-row justify-center items-center text-5xl gap-6 md:text-[100px] md:gap-20 mt-10 cursor-pointer">
                 <SiPhp className="hover:text-phpcolor duration-300" />
@@ -25,6 +26,7 @@ export default function Stack() {
                 <SiSymfony />
                 <SiMysql className="hover:text-mysqlcolor duration-300" />
                 <SiPrisma className="hover:text-prismacolor duration-300" />
+                <SiMongodb className="hover:text-mongodbcolor duration-300" />
             </div>
         </div>
 

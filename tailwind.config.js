@@ -36,6 +36,7 @@ module.exports = {
         'phpcolor': "#7377ad",
         'gitcolor': "#e84f32",
         'mysqlcolor': "#e6892e",
+        'mongodbcolor': "#01ec64",
       },
     },
   },

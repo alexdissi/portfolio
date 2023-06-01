@@ -11,7 +11,7 @@ export default function Project() {
             id: 2,
             titre: 'Netflix Clone',
             Description: ' I reproduced Netflix ( except video hosting ) using themoviedb Rest API to learn React and TailWind and reproduce the best UI .... Netflix  ',
-            techno: ["React", "API" , "TailWInd"],
+            techno: ["React", "API" , "TailWind"],
             link: "www.github.fr"
         },
         {

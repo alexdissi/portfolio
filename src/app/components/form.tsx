@@ -21,6 +21,12 @@ export default function Form() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    // Vérification des champs requis
+    if (!name || !email || !message) {
+      alert("Please fill in all the fields.");
+      return;
+    }
+
     // Enregistrement des données dans la table "contact" de Supabase
     const { data, error } = await supabase
       .from("contact")
@@ -39,13 +45,11 @@ export default function Form() {
       setMessage("");
 
       setTimeout(() => {
-        setIsAlertVisible(true);
+        setIsAlertVisible(false);
       }, 3000);
     }
   };
-  const handleAlertClose = () => {
-    setIsAlertVisible(false);
-  };
+
   return (
     <div
       className="flex flex-col items-center gap-10"
@@ -85,7 +89,7 @@ export default function Form() {
 
             <button
               className="text-gray-500 transition hover:text-gray-600"
-              onClick={handleAlertClose}
+              onClick={() => setIsAlertVisible(false)}
             >
               <span className="sr-only">Dismiss popup</span>
 
@@ -183,7 +187,10 @@ export default function Form() {
                   Message
                 </span>
               </label>
-              <button className="relative mt-5 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-l from-rose-400 via-fuchsia-500 to-indigo-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+              <button
+                disabled={!name || !email || !message} // Disable button when any of the fields is empty
+                className="relative mt-5 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-l from-rose-400 via-fuchsia-500 to-indigo-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
+              >
                 <span className="relative w-24 py-2 transition-all ease-in duration-200 bg-bglight dark:bg-bgdark rounded-md group-hover:bg-opacity-0">
                   Send
                 </span>

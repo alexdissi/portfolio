@@ -7,7 +7,7 @@ export default function HomePresentation() {
       id="home"
     >
       <div data-aos="fade-right">
-        <div className="text-4xl md:text-6xl lg:text-8xl font-sans font-extrabold mt-4 leading-loose text-solidheadinglight dark:text-solidheadingdark">
+        <div className="text-4xl text-left md:text-6xl lg:text-8xl font-sans font-extrabold mt-4 leading-loose text-solidheadinglight dark:text-solidheadingdark">
           <Typewriter
             options={{
               delay: 40,

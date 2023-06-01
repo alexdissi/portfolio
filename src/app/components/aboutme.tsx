@@ -33,7 +33,7 @@ export default function AboutMe() {
           href="/CV.pdf"
           target="_blank"
         >
-          <span className="relative w-28 py-3 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+          <span className="relative w-28 py-3 transition-all ease-in duration-75 bg-bglight dark:bg-bgdark rounded-md group-hover:bg-opacity-0">
             Download CV
           </span>
         </a>

@@ -1,6 +1,8 @@
 import { createClient } from "@supabase/supabase-js";
 import { exit } from "process";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_API_KEY;
@@ -44,9 +46,10 @@ export default function Form() {
       setEmail("");
       setMessage("");
 
-      setTimeout(() => {
-        setIsAlertVisible(false);
-      }, 3000);
+      // Display a success toast notification
+      toast.success(
+        "Your message has been sent and I will get back to you shortly."
+      );
     }
   };
 
@@ -56,61 +59,6 @@ export default function Form() {
       data-aos="fade-up"
       id="form"
     >
-      {isAlertVisible && (
-        <div
-          role="alert"
-          className="rounded-xl border fixed top-0 right-0 ml-4 mr-4 mt-10 md:mt-16 border-gray-100 bg-white p-4 shadow-xl"
-        >
-          <div className="flex items-start gap-4">
-            <span className="text-green-600">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="h-6 w-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            </span>
-
-            <div className="flex-1">
-              <strong className="block font-medium text-gray-900">Send</strong>
-
-              <p className="mt-1 text-sm text-gray-700">
-                Your message has been sent and I will get back to you shortly.
-              </p>
-            </div>
-
-            <button
-              className="text-gray-500 transition hover:text-gray-600"
-              onClick={() => setIsAlertVisible(false)}
-            >
-              <span className="sr-only">Dismiss popup</span>
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="h-6 w-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      )}
       <h2 className="font-mono font-extrabold text-3xl mx-4 text-solidheadinglight dark:text-solidheadingdark text-center">
         Contact Me
       </h2>
@@ -199,6 +147,7 @@ export default function Form() {
           </form>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }

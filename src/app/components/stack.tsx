@@ -23,7 +23,7 @@ export default function Stack() {
         </h2>
       </div>
       <div>
-        <h3 className="text-md md:text-2xl  text-center font-mono font-medium text-lightcontent dark:text-darkcontent mt-3">
+        <h3 className="text-lg md:text-2xl  text-center font-mono font-medium text-lightcontent dark:text-darkcontent mt-3">
           Technologies I&apos;ve been working with recently
         </h3>
       </div>

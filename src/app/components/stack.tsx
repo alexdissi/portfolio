@@ -23,11 +23,11 @@ export default function Stack() {
         </h2>
       </div>
       <div>
-        <h3 className="text-lg md:text-2xl  text-center font-mono font-medium text-lightcontent dark:text-darkcontent mt-3">
+        <h3 className="text-md md:text-2xl  text-center font-mono font-medium text-lightcontent dark:text-darkcontent mt-3">
           Technologies I&apos;ve been working with recently
         </h3>
       </div>
-      <div className="flex flex-row justify-center items-center text-4xl gap-6  md:text-[100px] md:gap-20 mt-10 cursor-pointer">
+      <div className="flex flex-row justify-center items-center text-5xl gap-6  md:text-[100px] md:gap-20 mt-10 cursor-pointer">
         <SiJavascript className="hover:text-jscolor duration-300" />
         <SiTypescript className="hover:text-tscolor duration-300" />
         <SiReact className="hover:text-reactcolor duration-300" />

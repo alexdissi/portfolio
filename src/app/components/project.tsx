@@ -70,6 +70,7 @@ export default function Project() {
             <div>
               <a
                 href={experience.link}
+                target="_blank"
                 className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
               >
                 Find out more

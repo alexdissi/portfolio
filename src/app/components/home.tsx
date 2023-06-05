@@ -39,7 +39,7 @@ export default function HomePresentation() {
           <img
             src="/photoprofil.png"
             alt="Photo de profil de Alexandre Dissi"
-            className="rounded-full w-52 h-52 sm:w-64 sm:w-64 md:w-72 md:h-72 xl:w-80 xl:h-80"
+            className="rounded-full w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72 xl:w-80 xl:h-80"
           />
         </div>
       </div>

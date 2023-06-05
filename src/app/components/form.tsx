@@ -64,7 +64,7 @@ export default function Form() {
       </h2>
 
       <div className="flex flex-col md:flex-row items-center gap-5 md:gap-44">
-        <div className="w-80 sm:w-96">
+        <div className="w-80 sm:w-[500px]">
           <h3 className="text-md text-justify md:text-5xl font-mono font-bold text-solidheadinglight dark:text-solidheadingdark mt-3">
             Drop me a line. I would like to hear from you.
           </h3>
@@ -123,18 +123,19 @@ export default function Form() {
               >
                 <textarea
                   name=""
-                  className="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
+                  className="peer h-200 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
                   id="text"
                   cols={30}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  rows={20}
+                  rows={6}
                 ></textarea>
 
                 <span className="absolute start-3 top-3 -translate-y-1/2 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-3 peer-focus:text-xs">
                   Message
                 </span>
               </label>
+
               <button
                 disabled={!name || !email || !message} // Disable button when any of the fields is empty
                 className="relative mt-5 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-l from-rose-400 via-fuchsia-500 to-indigo-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"

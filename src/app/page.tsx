@@ -24,15 +24,17 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-bglight dark:bg-bgdark flex flex-col gap-10 md:gap-20  mb-8 mt-3 dark:bg-gradient-to-br">
+    <div className="bg-bglight dark:bg-bgdark">
       <NavBar />
-      <HomePresentation />
-      <AboutMe />
-      <Experience />
-      <Project />
-      <Stack />
-      <Form />
-      <Footer />
+      <div className="bg-bglight dark:bg-bgdark flex flex-col mx-6 md:mx-0 gap-10 md:gap-20  mb-8 mt-3">
+        <HomePresentation />
+        <AboutMe />
+        <Experience />
+        <Project />
+        <Stack />
+        <Form />
+        <Footer />
+      </div>
     </div>
   );
 }

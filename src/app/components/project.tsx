@@ -22,7 +22,7 @@ export default function Project() {
       Description:
         "I realized the portfolio on which you are thanks to the numerous competences acquired these last months on the framework NextJs which I like very much.",
       techno: ["Next JS", "TailWind", "Supabase"],
-      link: "www.github.fr",
+      link: "https://github.com/alexdissi/portfolio",
     },
   ];
 

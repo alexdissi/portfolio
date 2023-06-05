@@ -3,11 +3,11 @@ import Typewriter from "typewriter-effect";
 export default function HomePresentation() {
   return (
     <div
-      className="flex flex-col-reverse gap-0 md:flex-col-reverse lg:flex-row text-center md:text-left md:justify-between items-center"
+      className="flex flex-col-reverse gap-0 md:flex-col-reverse lg:flex-row text-center md:text-left md:justify-between items-center xl:h-[550px]"
       id="home"
     >
       <div data-aos="fade-right">
-        <div className="text-4xl text-left md:text-6xl xl:text-8xl font-sans font-extrabold mt-4 leading-loose text-solidheadinglight dark:text-solidheadingdark">
+        <div className="text-5xl text-center md:text-left md:text-6xl xl:text-8xl font-sans font-extrabold mt-4 xl:leading-tight text-solidheadinglight dark:text-solidheadingdark">
           <Typewriter
             options={{
               delay: 40,

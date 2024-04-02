@@ -5,6 +5,8 @@ import {ThemeProvider} from "@/components/providers/theme-provider";
 import {useMessages} from "next-intl";
 import {NextIntlClientProvider} from "next-intl";
 import {Toaster} from "sonner";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +30,8 @@ export default function LocaleLayout({children, params: {locale}}: {
                   enableSystem
                   disableTransitionOnChange
               >
+                    <Analytics />
+                  <SpeedInsights />
                   {children}
                   <Toaster position="top-right" richColors/>
               </ThemeProvider>

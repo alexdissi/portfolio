@@ -10,7 +10,7 @@
     "titleProject": "Mes projets",
     "instamintDescription": "InstaMint est une plateforme de NFT , Crypto , qui est un clone d'instagram liée a la cryptomonnaie pour mettre au utilisateurs d'echanger , vendre et acheter des NFT de maniere simple et rapide.",
     "boilerplateDescription": "J'ai créé un boilerplate Next.js pour faciliter la création de projets en Next.js. Elle est préconfiguré avec TailwindCSS, et d'autres outils pour vous aider à démarrer rapidement.",
-    "gretaDescription": "J'ai créé une plateforme d'apprentissage à distance qui permet aux étudiants de suivre différents cours sous différents formats (vidéo, texte, PDF).",
+    "azureDescription": "J'ai créé une plateforme pour demarrer des VM Azure en un click, pour faciliter la vie des developpeurs et des entreprises a des fin de test.",
     "placeholderName": "Nom Prenom",
     "placeholderEmail": "Email",
     "placeholderMessage": "Message",

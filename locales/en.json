@@ -1,0 +1,30 @@
+{
+  "index": {
+    "title": "Hello \uD83D\uDC4B\uD83C\uDFFC",
+    "subtitle": "I'm",
+    "function": "a Full Stack Developer",
+    "bio": "Hello ! I'm Alexandre Dissi, a 25-year-old full stack developer with a passion for creating remarkable digital experiences. Currently a Master's student at Sup de Vinci Paris, I'm showcasing my design and development skills through this portfolio.\n\nMy career path has led me to explore a variety of web technologies such as JavaScript, PHP, as well as frameworks such as React, Next.js, Vue.js, Symfony and Express. My approach focuses on enhancing the user experience and creating aesthetic and intuitive interfaces.",
+    "cv": "Download Resume",
+    "stack": "Stack",
+    "link": "Link",
+    "titleProject": "My projects",
+    "instamintDescription": "InstaMint is an NFT platform, Crypto, which is an instagram clone linked to cryptocurrency to allow users to exchange, sell and buy NFT in a quick and easy way.",
+    "boilerplateDescription": "I've created a Next.js boilerplate to make it easier to create Next.js projects. Is preconfigured with TailwindCSS, and other tools to help you get started quickly.",
+    "gretaDescription": "I've created a distance learning platform that allows students to follow different courses in different formats (video, text, PDF).",
+    "placeholderName": "First Last Name",
+    "placeholderEmail": "Email",
+    "placeholderMessage": "Message",
+    "buttonSend": "Send",
+    "buttonLoading": "Sending...",
+    "namerequired": "First name is required",
+    "namemaxlength": "First name must be less than 32 characters",
+    "emailrequired": "Email is required",
+    "emailvalid": "Email must be valid",
+    "messagerequired": "Message is required",
+    "messagemaxlength": "Message must be less than 1000 characters",
+    "messageSuccess": "Message sent successfully",
+    "contactme": "Contact me",
+    "createwith": "Created with",
+    "by": "by"
+   }
+}

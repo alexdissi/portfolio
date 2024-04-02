@@ -1,0 +1,30 @@
+{
+  "index": {
+    "title": "Bonjour \uD83D\uDC4B\uD83C\uDFFC",
+    "subtitle": "Je suis",
+    "function": "Un développeur Full Stack",
+    "bio": "Bonjour ! Je suis Alexandre Dissi, un développeur full stack de 25 ans passionné par la création d'expériences numériques remarquables. Actuellement en Master à Sup de Vinci Paris, je mets en avant mes compétences en design et développement à travers ce portfolio.\n\nMon parcours m'a amené à explorer une variété de technologies web telles que JavaScript, PHP, ainsi que des frameworks tels que React, Next.js, Vue.js, Symfony et Express. Ma démarche se concentre sur l'amélioration de l'expérience utilisateur et la création d'interfaces esthétiques et intuitives.",
+    "cv": "Télécharger mon CV",
+    "stack": "Stack",
+    "link": "Lien",
+    "titleProject": "Mes projets",
+    "instamintDescription": "InstaMint est une plateforme de NFT , Crypto , qui est un clone d'instagram liée a la cryptomonnaie pour mettre au utilisateurs d'echanger , vendre et acheter des NFT de maniere simple et rapide.",
+    "boilerplateDescription": "J'ai créé un boilerplate Next.js pour faciliter la création de projets en Next.js. Elle est préconfiguré avec TailwindCSS, et d'autres outils pour vous aider à démarrer rapidement.",
+    "gretaDescription": "J'ai créé une plateforme d'apprentissage à distance qui permet aux étudiants de suivre différents cours sous différents formats (vidéo, texte, PDF).",
+    "placeholderName": "Nom Prenom",
+    "placeholderEmail": "Email",
+    "placeholderMessage": "Message",
+    "buttonSend": "Envoyer",
+    "buttonLoading": "Envoi en cours...",
+    "namerequired": "Le prénom est requis",
+    "namemaxlength": "Le prénom doit contenir moins de 32 caractères",
+    "emailrequired": "L'email est requis",
+    "emailvalid": "L'email doit être valide",
+    "messagerequired": "Le message est requis",
+    "messagemaxlength": "Le message doit contenir moins de 1000 caractères",
+    "messageSuccess": "Votre message a bien été envoyé !",
+    "contactme": "Me contacter",
+    "createwith": "Créé avec",
+    "by": "par"
+  }
+}

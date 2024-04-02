@@ -57,7 +57,7 @@ export const Form = () => {
     }
 
     return (
-        <form className="flex flex-col gap-5 w-4/6 md:w-3/6 lg:w-2/6" onSubmit={handleSubmit(onSubmitHandler)}>
+        <form className="flex flex-col gap-3 w-5/6 md:w-3/6 lg:w-2/6" onSubmit={handleSubmit(onSubmitHandler)}>
             <div>
                 <Label htmlFor="name">Name:</Label>
                 <Input

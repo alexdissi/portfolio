@@ -7,6 +7,8 @@
     "cv": "Download Resume",
     "stack": "Stack",
     "link": "Link",
+    "status1": "FullStack Engineer at",
+    "status2": "since November 2023",
     "titleProject": "My projects",
     "instamintDescription": "InstaMint is an NFT platform, Crypto, which is an instagram clone linked to cryptocurrency to allow users to exchange, sell and buy NFT in a quick and easy way.",
     "boilerplateDescription": "I've created a Next.js boilerplate to make it easier to create Next.js projects. Is preconfigured with TailwindCSS, and other tools to help you get started quickly.",

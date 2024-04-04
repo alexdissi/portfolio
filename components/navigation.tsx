@@ -8,7 +8,7 @@ export default function Navigation() {
         <nav className={"flex flex-row justify-between"}>
             <div className={"flex flex-row gap-4 items-center"}>
                 <Image src={"/icon.png"} alt={"logo"} width={50} height={50}/>
-                <h2 className={"text-3xl font-bold"}>Alexandre Dissi</h2>
+                <h2 className={"text-2xl sm:text-3xl font-bold"}>Alexandre Dissi</h2>
             </div>
             <div className={"flex flex-row items-center gap-4 text-xl"}>
                 <ThemeToggler/>

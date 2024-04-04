@@ -34,7 +34,7 @@ export default async function Home() {
 
 
     return (
-   <main className={"flex flex-col gap-20 mx-6 md:mx-10 lg:mx-20 xl:mx-40 mt-10"}>
+   <main className={"flex flex-col gap-20 mx-4 md:mx-10 lg:mx-20 xl:mx-40 mt-10"}>
        <Navigation />
        <Bio title={t("title")} subtitle={t("subtitle")} poste={t("function")} />
        <Text bio={t("bio")} cv={t("cv")} status1={t("status1")} status2={t("status2")} />

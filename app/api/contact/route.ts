@@ -15,11 +15,11 @@ export async function POST(req: Request) {
         data: {
             name,
             email: cleanEmail,
-            contenu: cleanMessage,
+            content: cleanMessage,
         },
     })
 
-    await sendMail("alexandredissi@gmail.com", "Nouveau message sur ton portfolio", `Tu a un nouveau message de ${name} : ${cleanMessage}`)
+    await sendMail("alexandredissi@gmail.com", "Nouveau message sur ton portfolio", `Tu a un nouveau message de ${name} , sont email est ${cleanEmail} , Message: ${cleanMessage}`)
 
 
     return NextResponse.json("Message send", {status: 200})

@@ -56,7 +56,7 @@ export default async function Home() {
         </section>
        <section className={"flex flex-col sm:flex-row gap-10 items-center justify-evenly"} id={"contact"}>
 
-           <span className="inline-block"><span className="relative inline-block">  <h2 className={"scroll-m-20 mt-6 lg:mt-0 font-extrabold tracking-tight text-4xl md:text-6xl"}>{t("contactme")}</h2><svg
+           <span className="inline-block"><span className="relative inline-block">  <h2 className={"scroll-m-20 lg:mt-0 font-extrabold tracking-tight text-4xl md:text-6xl"}>{t("contactme")}</h2><svg
                className="hidden md:block absolute -z-10 w-[calc(100%+1rem)] top-0 left-0 fill-primary"
                xmlns="http://www.w3.org/2000/svg" width="223" height="62" viewBox="0 0 223 62" aria-hidden="true"
                preserveAspectRatio="none"><path

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import {ThemeProvider} from "@/components/providers/theme-provider";
 import {useMessages} from "next-intl";
@@ -7,11 +6,9 @@ import {NextIntlClientProvider} from "next-intl";
 import {Toaster} from "sonner";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-
-const inter = Inter({ subsets: ["latin"] });
-
+import React from "react";
 export const metadata: Metadata = {
-  title: "Alexandre Dissi",
+  title: "Alexandre Dissi | Portfolio",
   description: "Personal website of Alexandre Dissi",
 };
 

@@ -27,7 +27,7 @@ export default async function Home() {
             description: t("boilerplateDescription"),
             image: "/next.jpg",
             items: ["NextJS","TailwindCSS","PostgreSQL, VercelBlob"],
-            link: "https://github.com/alexdissi/boilerplate_next"
+            link: "https://github.com/alexdissi/boilerplate"
         },
         {
             title: "Azure VM Cloud",

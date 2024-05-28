@@ -12,11 +12,11 @@ export default function Bio ({title, subtitle, poste}: BioProps) {
   return (
       <motion.section  initial={{opacity: 0, x: -100}}
                        animate={{opacity: 1, x: 0}}
-                       transition={{duration: 0.5}} className={"flex flex-col-reverse lg:flex-row text-center lg:text-left gap-5 md:gap-0 items-center justify-between mx-20"}>
+                       transition={{duration: 0.5}} className={"flex flex-col-reverse lg:flex-row text-center lg:text-left gap-5 md:gap-0 items-center justify-between mx-10"}>
               <div
-                  className="relative flex flex-col h-full w-full items-start justify-center overflow-hidden rounded-lg p-10 scroll-m-20 text-4xl mt-6 lg:mt-0 font-extrabold tracking-tight lg:text-5xl xl:text-6xl">
-                  <h1 className={"z-40"}>{title} ,</h1>
-                  <h2>{subtitle}&nbsp;<span className={"text-orange-500"}>Alexandre Dissi</span></h2>
+                  className="relative flex flex-col md:gap-3 h-full w-full items-start justify-center overflow-hidden rounded-lg text-center md:text-left md:p-10 scroll-m-20 text-3xl mt-6 lg:mt-0 font-extrabold tracking-tight lg:text-5xl xl:text-6xl">
+                  <h1 className={"z-40 mx-auto md:mx-0"}>{title} ,</h1>
+                  <h2>{subtitle}&nbsp;<span className={"text-orange-500"}>Alexandre Dissi ,</span></h2>
                   <h2>{poste}</h2>
                   <DotPattern
                       width={30}

@@ -1,15 +1,17 @@
+import { getSiteUrl } from "@/lib/site";
+
 export const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Alexandre Dissi",
-  url: "https://alexandredissi.figenn.com/",
+  url: `${getSiteUrl().toString()}/`,
 };
 
 export const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Alexandre Dissi",
-  url: "https://alexandredissi.figenn.com/",
+  url: `${getSiteUrl().toString()}/`,
   jobTitle: "Software Engineer",
   knowsAbout: ["Go", "React", "SaaS", "Clean Architecture", "Performance"],
   sameAs: [

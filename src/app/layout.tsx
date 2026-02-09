@@ -12,10 +12,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const baseUrl = new URL("https://alexandredissi.figenn.com");
+import { getSiteUrl } from "@/lib/site";
+
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
-  metadataBase: baseUrl,
+  metadataBase: siteUrl,
   title: "Alexandre Dissi — Go / React Software Engineer",
   description:
     "Go/React software engineer in France. Building scalable SaaS applications and high-impact web solutions with clean architecture and performance in mind.",

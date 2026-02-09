@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://alexandredissi.figenn.com";
+import { getSiteUrl } from "@/lib/site";
 
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = getSiteUrl().toString();
   const lastModified = new Date();
 
   return [

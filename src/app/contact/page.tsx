@@ -12,10 +12,10 @@ export default function ContactPage() {
 
         <div className="space-y-3">
           <a
-            href="mailto:contact@figenn.com"
+            href="mailto:alexandre@dissi.fr"
             className="text-gray-900 dark:text-gray-100 underline underline-offset-4"
           >
-            contact@figenn.com
+            alexandre@dissi.fr
           </a>
           <p className="text-sm text-gray-500 dark:text-gray-400">France</p>
         </div>

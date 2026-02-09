@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Script from "next/script";
-import { personJsonLd } from "./structured-data";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -58,12 +56,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Script
-          id="jsonld-person"
-          type="application/ld+json"
-          // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD is expected to be embedded as a script.
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
-        />
         {children}
       </body>
     </html>

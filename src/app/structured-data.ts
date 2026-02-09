@@ -1,3 +1,10 @@
+export const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Alexandre Dissi",
+  url: "https://alexandredissi.figenn.com/",
+};
+
 export const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",

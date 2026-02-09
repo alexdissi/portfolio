@@ -9,7 +9,7 @@ export default function Home() {
           <div className="mb-6 h-24 w-24 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700">
             <Image
               src="/profil.png"
-              alt="Profile"
+              alt="Portrait of Alexandre Dissi"
               width={96}
               height={96}
               className="h-full w-full object-cover"
@@ -22,7 +22,9 @@ export default function Home() {
           <p className="mb-4 text-lg text-gray-600 dark:text-gray-300">
             Software Engineer (Go / React)
           </p>
-          <p className="mb-8 text-sm text-gray-500 dark:text-gray-400">France</p>
+          <p className="mb-8 text-sm text-gray-500 dark:text-gray-400">
+            France
+          </p>
 
           <div className="mb-12 text-gray-600 dark:text-gray-300 max-w-lg">
             <p className="text-lg leading-relaxed">
@@ -61,8 +63,12 @@ export default function Home() {
           <div className="space-y-8">
             <div>
               <div className="mb-2">
-                <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100">Hublead</h3>
-                <p className="text-gray-600 dark:text-gray-300">Software Engineer</p>
+                <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100">
+                  Hublead
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Software Engineer
+                </p>
               </div>
               <div className="mb-4 text-sm text-gray-500 dark:text-gray-400">
                 <span className="font-medium">Sep 2025 – Present</span> • France
@@ -83,8 +89,12 @@ export default function Home() {
 
             <div>
               <div className="mb-2">
-                <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100">CashNow</h3>
-                <p className="text-gray-600 dark:text-gray-300">Full-Stack Developer</p>
+                <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100">
+                  CashNow
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Full-Stack Developer
+                </p>
               </div>
               <div className="mb-4 text-sm text-gray-500 dark:text-gray-400">
                 <span className="font-medium">Oct 2023 – Jan 2025</span> •
@@ -99,8 +109,12 @@ export default function Home() {
 
             <div>
               <div className="mb-2">
-                <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100">CAFOC</h3>
-                <p className="text-gray-600 dark:text-gray-300">Front-end Developer</p>
+                <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100">
+                  CAFOC
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Front-end Developer
+                </p>
               </div>
               <div className="mb-4 text-sm text-gray-500 dark:text-gray-400">
                 <span className="font-medium">Apr 2023 – Jun 2023</span> •
@@ -119,7 +133,9 @@ export default function Home() {
                 <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100">
                   École Normale Supérieure (ENS)
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">Full-Stack Developer</p>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Full-Stack Developer
+                </p>
               </div>
               <div className="mb-4 text-sm text-gray-500 dark:text-gray-400">
                 <span className="font-medium">Mar 2022 – Jun 2022</span> • Paris
@@ -160,7 +176,9 @@ export default function Home() {
 
             <div>
               <div className="mb-2">
-                <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100">GRETA 93</h3>
+                <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100">
+                  GRETA 93
+                </h3>
                 <p className="text-gray-600 dark:text-gray-300">
                   Application Developer, Computer Science
                 </p>

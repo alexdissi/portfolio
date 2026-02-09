@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
+import { personJsonLd } from "./structured-data";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,10 +14,38 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const baseUrl = new URL("https://alexandredissi.figenn.com");
+
 export const metadata: Metadata = {
-  title: "Alexandre Dissi - Software Engineer",
+  metadataBase: baseUrl,
+  title: "Alexandre Dissi — Go / React Software Engineer",
   description:
-    "Software Engineer passionate about building scalable SaaS applications and high-impact web solutions with Go and React.",
+    "Go/React software engineer in France. Building scalable SaaS applications and high-impact web solutions with clean architecture and performance in mind.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: "/",
+    title: "Alexandre Dissi — Go / React Software Engineer",
+    description:
+      "Go/React software engineer in France. Building scalable SaaS applications and high-impact web solutions.",
+    images: [
+      {
+        url: "/profil.png",
+        width: 512,
+        height: 512,
+        alt: "Alexandre Dissi",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Alexandre Dissi — Go / React Software Engineer",
+    description:
+      "Go/React software engineer in France. Building scalable SaaS applications and high-impact web solutions.",
+    images: ["/profil.png"],
+  },
 };
 
 export default function RootLayout({
@@ -28,6 +58,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Script
+          id="jsonld-person"
+          type="application/ld+json"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD is expected to be embedded as a script.
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         {children}
       </body>
     </html>

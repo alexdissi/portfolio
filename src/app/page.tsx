@@ -262,6 +262,20 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="pt-8 border-t border-gray-200 dark:border-gray-700">
+          <div className="mb-4 flex justify-center gap-6">
+            <a
+              href="/projects"
+              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+            >
+              Projects
+            </a>
+            <a
+              href="/contact"
+              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+            >
+              Contact
+            </a>
+          </div>
           <div className="text-center space-x-6">
             <a
               href="https://www.linkedin.com/in/alexandredissi/"

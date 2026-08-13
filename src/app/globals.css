@@ -1,26 +1,217 @@
 @import "tailwindcss";
 
+/* Brand tokens — monochrome canvas + one indigo accent
+   (echoes Murmur's lavender for a coherent personal brand) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f7f7fb;
+  --foreground: #18181f;
+  --accent: #4f46e5;
+  --accent-muted: rgba(79, 70, 229, 0.55);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-bricolage);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0b0b10;
+    --foreground: #ececf1;
+    --accent: #a5b4fc;
+    --accent-muted: rgba(165, 180, 252, 0.55);
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 30%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-muted);
+  outline-offset: 2px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Soft indigo glow behind the hero */
+.hero-glow {
+  background: radial-gradient(
+    60% 50% at 50% 0%,
+    color-mix(in oklab, var(--accent) 10%, transparent),
+    transparent 70%
+  );
+}
+
+/* Fine dot grid under the hero, fading out toward the bottom.
+   The accent layer only shows through a radial mask trailing the cursor
+   (--mx/--my set by HeroBackdrop). */
+.grid-mask {
+  mask-image: radial-gradient(70% 90% at 50% 0%, black 30%, transparent 100%);
+}
+.dot-grid-base {
+  background-image: radial-gradient(
+    color-mix(in oklab, var(--foreground) 14%, transparent) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+}
+.dot-grid-accent {
+  background-image: radial-gradient(var(--accent) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+  mask-image: radial-gradient(
+    140px circle at var(--mx, -9999px) var(--my, -9999px),
+    black 20%,
+    transparent 75%
+  );
+}
+
+/* Experience timeline draws itself as it scrolls into view.
+   The gray border stays as the track; this accent line is the progress. */
+@keyframes draw-line {
+  from {
+    transform: scaleY(0);
+  }
+}
+@keyframes dot-in {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .tl-line {
+      transform-origin: top;
+      animation: draw-line 1ms linear both;
+      animation-timeline: view();
+      animation-range: entry 15% cover 70%;
+    }
+    .tl-dot {
+      animation: dot-in 1ms cubic-bezier(0.22, 1, 0.36, 1) both;
+      animation-timeline: view();
+      animation-range: entry 5% entry 30%;
+    }
+  }
+}
+
+/* Cross-document view transitions: the identity morphs between the hero
+   name and the header wordmark; the rest of the page crossfades. */
+@view-transition {
+  /* biome-ignore lint/correctness/noUnknownProperty: valid descriptor of the @view-transition at-rule */
+  navigation: auto;
+}
+@keyframes vt-out {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes vt-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+/* biome-ignore lint/correctness/noUnknownTypeSelector: view-transition pseudo-elements take a name argument */
+::view-transition-old(root) {
+  animation: vt-out 0.2s ease-out both;
+}
+/* biome-ignore lint/correctness/noUnknownTypeSelector: view-transition pseudo-elements take a name argument */
+::view-transition-new(root) {
+  animation: vt-in 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+/* biome-ignore lint/correctness/noUnknownTypeSelector: view-transition pseudo-elements take a name argument */
+::view-transition-group(identity) {
+  animation-duration: 0.35s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none;
+  }
+}
+
+/* Below-hero sections fade up as they enter the viewport
+   (progressive enhancement: browsers without scroll timelines
+   simply show the settled state) */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: rise-in 1ms linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
+  }
+}
+
+/* Staggered entrance on load: set --rd per element */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.rise {
+  opacity: 0;
+  animation: rise-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--rd, 0s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .rise {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* Print: a portfolio gets printed by recruiters. Entrance/scroll
+   animations never run on paper, so settle everything; drop the
+   decorative chrome and interactive-only elements. */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  .rise,
+  .reveal {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .hero-glow,
+  .grid-mask,
+  .tl-line {
+    display: none;
+  }
+  header nav,
+  footer {
+    display: none;
+  }
+  section {
+    break-inside: avoid;
+  }
+  a {
+    text-decoration: none;
+  }
 }

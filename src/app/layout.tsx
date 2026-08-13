@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,7 +12,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
+  subsets: ["latin"],
+  weight: ["500", "600"],
+});
+
 import { getSiteUrl } from "@/lib/site";
+import { murmurJsonLd, personJsonLd, websiteJsonLd } from "./structured-data";
 
 const siteUrl = getSiteUrl();
 
@@ -32,19 +39,20 @@ export const metadata: Metadata = {
       "Go/React software engineer in France. Building scalable SaaS applications and high-impact web solutions.",
     images: [
       {
-        url: "/profil.png",
+        url: "/profil.jpg",
         width: 512,
         height: 512,
         alt: "Alexandre Dissi",
       },
     ],
   },
+  robots: { index: true, follow: true },
   twitter: {
     card: "summary",
     title: "Alexandre Dissi — Go / React Software Engineer",
     description:
       "Go/React software engineer in France. Building scalable SaaS applications and high-impact web solutions.",
-    images: ["/profil.png"],
+    images: ["/profil.jpg"],
   },
 };
 
@@ -56,8 +64,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${bricolage.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: static, build-time JSON-LD
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([websiteJsonLd, personJsonLd, murmurJsonLd]),
+          }}
+        />
         {children}
       </body>
     </html>

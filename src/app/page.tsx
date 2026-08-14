@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { HeroBackdrop } from "@/components/hero-backdrop";
+import { LumenCard } from "@/components/lumen-card";
 import { MurmurCard } from "@/components/murmur-card";
 
 function MailIcon({ className = "size-4" }: { className?: string }) {
@@ -152,16 +153,17 @@ export default function Home() {
           <section className="reveal mb-20 sm:mb-28">
             <div className="mb-8 flex items-center gap-4">
               <h2 className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-accent">
-                Featured Project
+                Featured Projects
               </h2>
               <span
                 aria-hidden="true"
                 className="h-px flex-1 bg-slate-200 dark:bg-slate-800"
               />
             </div>
-            {/* the flagship breaks out of the text column */}
-            <div className="sm:-mx-6 lg:-mx-14">
+            {/* the flagships break out of the text column */}
+            <div className="space-y-10 sm:-mx-6 lg:-mx-14">
               <MurmurCard />
+              <LumenCard />
             </div>
           </section>
 

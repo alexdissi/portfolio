@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { LumenCard } from "@/components/lumen-card";
 import { MurmurCard } from "@/components/murmur-card";
 import { ProjectCard } from "@/components/project-card";
 import { SiteHeader } from "@/components/site-header";
@@ -6,7 +7,7 @@ import { SiteHeader } from "@/components/site-header";
 export const metadata: Metadata = {
   title: "Projects — Alexandre Dissi",
   description:
-    "Projects by Alexandre Dissi: Murmur, a free on-device AI dictation app for macOS, plus SaaS and integration work in Go and React.",
+    "Projects by Alexandre Dissi: Murmur, a free on-device AI dictation app for macOS; Lumen, a WHOOP-style health dashboard with a Claude MCP server; plus SaaS and integration work in Go and React.",
 };
 
 export default function ProjectsPage() {
@@ -25,6 +26,8 @@ export default function ProjectsPage() {
 
         <div className="space-y-10">
           <MurmurCard />
+
+          <LumenCard />
 
           <ProjectCard
             name="Hublead"

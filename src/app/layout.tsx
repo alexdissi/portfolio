@@ -19,7 +19,12 @@ const bricolage = Bricolage_Grotesque({
 });
 
 import { getSiteUrl } from "@/lib/site";
-import { murmurJsonLd, personJsonLd, websiteJsonLd } from "./structured-data";
+import {
+  lumenJsonLd,
+  murmurJsonLd,
+  personJsonLd,
+  websiteJsonLd,
+} from "./structured-data";
 
 const siteUrl = getSiteUrl();
 
@@ -70,7 +75,12 @@ export default function RootLayout({
           type="application/ld+json"
           // biome-ignore lint/security/noDangerouslySetInnerHtml: static, build-time JSON-LD
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify([websiteJsonLd, personJsonLd, murmurJsonLd]),
+            __html: JSON.stringify([
+              websiteJsonLd,
+              personJsonLd,
+              murmurJsonLd,
+              lumenJsonLd,
+            ]),
           }}
         />
         {children}

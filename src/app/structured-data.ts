@@ -27,6 +27,23 @@ export const personJsonLd = {
   ],
 };
 
+export const lumenJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Lumen",
+  operatingSystem: "Web",
+  applicationCategory: "HealthApplication",
+  url: "https://lumen.dissi.fr",
+  description:
+    "WHOOP-style health dashboard: recovery, sleep and strain scores computed from Fitbit data synced through Google Health, with a built-in MCP server so Claude can read your health data.",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  author: {
+    "@type": "Person",
+    name: "Alexandre Dissi",
+    url: `${getSiteUrl().toString()}/`,
+  },
+};
+
 export const murmurJsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
